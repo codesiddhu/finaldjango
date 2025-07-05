@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to School Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        h1 {
+            color: #2d3e50;
+        }
+        p {
+            color: #4a4a4a;
+            font-size: 1.2em;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+     {% extends "home.html" %}
+     {% block content %} 
+    <div class="container">
+        <h1>Welcome to the School Portal</h1>
+        <p>
+            This is your one-stop destination for all school-related information.<br>
+            Stay updated with announcements, schedules, and resources.
+        </p>
+         <a href ="{% url 'home'%}">home</a>
+    </div>
+     {% endblock content %}
+</body>
+</html>

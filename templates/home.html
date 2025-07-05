@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>
+            home pages 
+        </title>
+        <style>
+            *{
+                margin:0px;
+                box-sizing:border-content;
+                top:10px;
+            }
+            body{
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+                
+            }
+            .main{
+                display:flex;
+                flex-direction:row;
+                width:100%;
+                height:10%;
+                justify-content: space-evenly;
+                gap:20px;
+                align-items:center;
+                color:antiquewhite;
+                background-color: black;
+                margin:50px;
+                left:0px;
+                padding-left:0px;
+                margin-left:0px;
+
+
+            }
+            a{
+                color:white;
+                text-decoration: none;
+
+            }
+            body>h1{
+               
+                
+                background-color:white;
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <center><h1>welecome to home pages </h1></center>
+        <div class ="main">
+        <a href ="{% url 'index'%}">index</a>
+        <a href ="{% url 'login'%}">login</a>
+        <a href ="{% url 'products'%}">products</a>
+        <a href ="{% url 'services'%}">services</a>
+        <a href ="{% url 'transport'%}">transport</a>
+        <a href ="{% url 'home'%}">home</a>
+    </div>
+    <div>
+        {% block content %}
+    <div>
+        {% for data in data%}
+        <div><h1>{{data.name}}</h1></div>
+        <div><h1>{{data.email}}</h1></div>
+        <div><h1>{{data.phone}}</h1></div>
+        <div><h1>{{data.date_of_birth}}</h1></div>
+        <div><h1>{{data.address}}</h1></div>
+        {% endfor%}
+    </div>
+       {% endblock content %}
+    </div>
+    </body>
+      
+
+</html>

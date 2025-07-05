@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transport Webservices</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        h1 { color: #333; }
+    </style>
+</head>
+<body>
+    <div>
+        {% extends "home.html"%}
+        {%block content %}
+    <h1>Transport Webservices</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Endpoint</th>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Get All Vehicles</td>
+                <td>/api/transport/vehicles/</td>
+                <td>GET</td>
+                <td>Returns a list of all vehicles in the transport system.</td>
+            </tr>
+            <tr>
+                <td>Get Vehicle Details</td>
+                <td>/api/transport/vehicles/&lt;id&gt;/</td>
+                <td>GET</td>
+                <td>Returns details of a specific vehicle by ID.</td>
+            </tr>
+            <tr>
+                <td>Add New Vehicle</td>
+                <td>/api/transport/vehicles/</td>
+                <td>POST</td>
+                <td>Adds a new vehicle to the transport system.</td>
+            </tr>
+            <tr>
+                <td>Update Vehicle</td>
+                <td>/api/transport/vehicles/&lt;id&gt;/</td>
+                <td>PUT</td>
+                <td>Updates information for a specific vehicle.</td>
+            </tr>
+            <tr>
+                <td>Delete Vehicle</td>
+                <td>/api/transport/vehicles/&lt;id&gt;/</td>
+                <td>DELETE</td>
+                <td>Deletes a vehicle from the transport system.</td>
+            </tr>
+        </tbody>
+    </table>
+     <a href ="{% url 'home'%}">home</a>
+     {%endblock content%}
+</div>
+</body>
+</html>

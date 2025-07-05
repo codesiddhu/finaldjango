@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f8f9fa;
+        }
+        .services-container {
+            max-width: 900px;
+            margin: auto;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+            padding: 30px 20px;
+            width: 260px;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .service-card:hover {
+            box-shadow: 0 4px 16px rgba(44,62,80,0.15);
+        }
+        .service-title {
+            font-size: 1.3em;
+            color: #2980b9;
+            margin-bottom: 12px;
+        }
+        .service-desc {
+            color: #555;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        {%extends "home.html"%}
+        {% block content%}
+    <div class="services-container">
+        <h1>Our Services</h1>
+        <div class="service-list">
+            <div class="service-card">
+                <div class="service-title">Academic Counseling</div>
+                <div class="service-desc">Personalized guidance to help students achieve their academic goals.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Extracurricular Activities</div>
+                <div class="service-desc">A wide range of clubs, sports, and arts programs for holistic development.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Library & Resources</div>
+                <div class="service-desc">Access to a rich collection of books, journals, and digital resources.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Career Guidance</div>
+                <div class="service-desc">Workshops and counseling to help students plan their future careers.</div>
+            </div>
+            <div class="service-card">
+                <div class="service-title">Transport Facilities</div>
+                <div class="service-desc">Safe and reliable transportation for students across the city.</div>
+            </div>
+        </div>
+    </div>
+    {% endblock content%}
+</div>
+     <a href ="{% url 'home'%}">home</a>
+</body>
+</html>
