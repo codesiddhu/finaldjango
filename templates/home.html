@@ -68,6 +68,13 @@
     </div>
        {% endblock content %}
     </div>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ admission_form.as_table }} 
+            <button type="submit">Submit</button>
+        </form>
+    </div>
     </body>
       
 

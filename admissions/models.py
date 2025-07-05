@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 class Admission(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=10)
     email = models.EmailField()
-    phone = models.CharField()
+    phone = models.CharField(max_length=10)
     date_of_birth = models.DateField()
     address = models.TextField()
     def __str__(self):
